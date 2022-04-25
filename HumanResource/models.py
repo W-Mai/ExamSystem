@@ -26,6 +26,9 @@ class Human(BaseModel):
     department = models.ForeignKey('Department', verbose_name="部门", on_delete=models.DO_NOTHING)
     attendance_status = models.ForeignKey('AttendanceStatus', verbose_name="考勤状态", on_delete=models.DO_NOTHING)
 
+    def __str__(self):
+        return f"{self.name} - {self.department}"
+
 
 class Department(BaseModel):
     name = models.CharField(max_length=50, verbose_name="部门名称")
