@@ -23,7 +23,12 @@ class Human(BaseModel):
     gender = GenderField()
 
     department = models.ForeignKey('Department', verbose_name="部门", on_delete=models.DO_NOTHING)
+    attendance_status = models.ForeignKey('AttendanceStatus', verbose_name="考勤状态", on_delete=models.DO_NOTHING)
 
 
 class Department(BaseModel):
     name = models.CharField(max_length=50, verbose_name="部门名称")
+
+
+class AttendanceStatus(BaseModel):
+    name = models.CharField(max_length=50, verbose_name="考勤状态")
