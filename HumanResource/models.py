@@ -21,3 +21,9 @@ class Human(BaseModel):
     name = models.CharField(max_length=50, verbose_name='姓名')
     age = models.IntegerField(verbose_name='年龄')
     gender = GenderField()
+
+    department = models.ForeignKey('Department', verbose_name="部门", on_delete=models.DO_NOTHING)
+
+
+class Department(BaseModel):
+    name = models.CharField(max_length=50, verbose_name="部门名称")
