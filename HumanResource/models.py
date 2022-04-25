@@ -30,6 +30,12 @@ class Human(BaseModel):
 class Department(BaseModel):
     name = models.CharField(max_length=50, verbose_name="部门名称")
 
+    def __str__(self):
+        return self.name
+
 
 class AttendanceStatus(BaseModel):
     name = models.CharField(max_length=50, verbose_name="考勤状态")
+
+    def __str__(self):
+        return self.name

@@ -11,6 +11,8 @@ class HumanAdmin(admin.ModelAdmin):
     list_filter = ('department', 'attendance_status')
     search_fields = ('name', 'department')
 
+    list_editable = ('department', 'attendance_status',)
+
 
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
