@@ -12,8 +12,9 @@ class GenderFiledChoice(models.IntegerChoices):
 
 
 class GenderField(models.IntegerField):
-    def __init__(self, verbose_name="性别", *args, **kwargs):
-        super().__init__(choices=GenderFiledChoice.choices, default=GenderFiledChoice.UNKNOWN,
+    def __init__(self, choices=GenderFiledChoice.choices, verbose_name="性别", default=GenderFiledChoice.UNKNOWN, *args,
+                 **kwargs):
+        super().__init__(choices=choices, default=default,
                          verbose_name=verbose_name, *args, **kwargs)
 
 
