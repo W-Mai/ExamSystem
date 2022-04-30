@@ -124,6 +124,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SIMPLEUI_THEME = 'default'
+SIMPLEUI_HOME_INFO = False
 SIMPLEUI_LOGO = '/static/favicon.svg'
 
 SIMPLEUI_CONFIG = {
